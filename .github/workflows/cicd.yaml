@@ -20,9 +20,9 @@ jobs:
         python-version: '3.9'
     - name: Install Dependencies
       run: |
-      python -m pip install --upgrade pip
-      pip install flask
-      pip install pytest
+        python -m pip install --upgrade pip
+        pip install flask
+        pip install pytest
 
     - name: Run tests
       run: | 

@@ -7,6 +7,12 @@ on:
     branches: ['main']
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      run: docker build . --file dockerfile --tag workflow-test:$(date +%s)
+      
   build-and-test:
     runs-on: ubuntu-latest
 
